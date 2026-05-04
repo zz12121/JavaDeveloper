@@ -8,12 +8,10 @@
 
 Java 从 1995 年诞生至今经历了四个大阶段，每个阶段的核心主题都对应当时的行业痛点：
 
-| 时期 | 版本范围 | 核心主题 | 解决的痛点 |
-|------|---------|---------|-----------|
-| 强类型化 | Java 5~7 | 泛型、枚举、注解、try-with-resources | 类型安全、配置管理、资源泄漏 |
-| 函数式革命 | Java 8 | [[01_Java核心/08_Lambda与Stream/Lambda与函数式\|Lambda]]、[[01_Java核心/08_Lambda与Stream/Stream API\|Stream API]]、Optional | 样板代码、集合处理、null 安全 |
-| 现代化基础设施 | Java 9~11 | 模块系统（JPMS）、var、HTTP Client、不可变集合工厂 | 依赖管理、类型冗余、网络库老化 |
-| 声明式 + 轻量并发 | Java 14~21 | Records、Sealed Classes、Pattern Matching、Virtual Threads | DTO 样板代码、继承失控、类型匹配繁琐、线程昂贵 |
+- **强类型化（Java 5~7）**：泛型、枚举、注解、try-with-resources。解决：类型安全、配置管理、资源泄漏
+- **函数式革命（Java 8）**：[[01_Java核心/08_Lambda与Stream/Lambda与函数式|Lambda]]、[[01_Java核心/08_Lambda与Stream/Stream API|Stream API]]、Optional。解决：样板代码、集合处理、null 安全
+- **现代化基础设施（Java 9~11）**：模块系统（JPMS）、var、HTTP Client、不可变集合工厂。解决：依赖管理、类型冗余、网络库老化
+- **声明式 + 轻量并发（Java 14~21）**：Records、Sealed Classes、Pattern Matching、Virtual Threads。解决：DTO 样板代码、继承失控、类型匹配繁琐、线程昂贵
 
 **一个关键认知**：Java 不是在追潮流，而是在解决真实问题。Records 不是为了"好看"，是为了消除 Lombok 和样板代码；Virtual Threads 不是为了"高性能"，是为了让开发者不用操心线程池大小。
 

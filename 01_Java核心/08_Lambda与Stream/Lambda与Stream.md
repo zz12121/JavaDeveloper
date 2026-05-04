@@ -46,10 +46,8 @@ Lambda（行为参数化）          Stream（数据管道）
 
 ### 各维度文档导航
 
-| 文档 | 覆盖内容 | 重点 |
-|------|---------|------|
-| [[01_Java核心/08_Lambda与Stream/Lambda与函数式|Lambda 与函数式]] | 函数式接口、invokedynamic 底层、变量捕获、方法引用 | Lambda ≠ 匿名内部类、this 指向、effectively final |
-| [[01_Java核心/08_Lambda与Stream/Stream API|Stream API]] | 惰性求值、中间/终止操作、并行流、Collector | Stream 只能消费一次、装箱陷阱、并行流适用条件 |
+- [[01_Java核心/08_Lambda与Stream/Lambda与函数式|Lambda 与函数式]]：函数式接口、invokedynamic 底层、变量捕获、方法引用。重点：Lambda ≠ 匿名内部类、this 指向、effectively final
+- [[01_Java核心/08_Lambda与Stream/Stream API|Stream API]]：惰性求值、中间/终止操作、并行流、Collector。重点：Stream 只能消费一次、装箱陷阱、并行流适用条件
 
 ---
 
