@@ -102,6 +102,6 @@ private void writeObject(java.io.ObjectOutputStream s) throws ... {
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[序列化]]` 主题文档，把 `writeObject/readObject` 的自定义序列化机制整理进去
+2. 打开 `[[01_Java核心/14_序列化/序列化|01_Java核心/序列化]]` 主题文档，把 `writeObject/readObject` 的自定义序列化机制整理进去
 3. 在 Obsidian 里建双向链接：`[[06_中间件/Redis序列化]]` 关联学习
 4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
