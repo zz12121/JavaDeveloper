@@ -216,3 +216,18 @@
   - Zuul 2.x 也改用 Netty，但 Gateway 与 Spring Cloud 生态集成更好
 - **核心概念**：Route（路由规则）、Predicate（断言，匹配请求）、Filter（过滤器）
 - **统一认证**：自定义 `GlobalFilter` 实现 `filter()` 方法，从请求头/Header 取 Token → 校验 → 放行或返回 401
+
+---
+
+## P8 架构型考法汇总
+
+> P8 级别开放设计题，考察技术整合与架构决策能力。
+
+1. **如何设计一个支持热部署的模块化 Spring 应用？**
+   - 考点：Spring DevTools、自定义 ClassLoader、Bean 重载、状态保持
+2. **如何设计一个全链路监控系统的埋点方案？**
+   - 考点：AOP 统一埋点、TraceId 传递、采样率控制、低开销设计
+3. **如何设计一个支撑 1000 个微服务的 Spring Cloud 架构？**
+   - 考点：注册中心选型、配置中心、灰度发布、服务治理
+4. **如何设计一个高可用的 Spring Boot Starter 给全公司用？**
+   - 考点：自动配置原理、条件装配、健康监测、隔离设计
