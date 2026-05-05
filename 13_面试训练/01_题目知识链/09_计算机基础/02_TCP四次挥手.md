@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[TCP四次挥手]]` → FIN / ACK / FIN / ACK
-- `[[TIME_WAIT状态]]` → 2MSL 等待，防止 ACK 丢失
-- `[[CLOSE_WAIT堆积]]` → 被动关闭方不调 close() 导致的问题
-- `[[TCP状态机]]` → `FIN_WAIT_1 → FIN_WAIT_2 → TIME_WAIT`
-- `[[Socket参数]]` → `SO_REUSEADDR` / `tcp_tw_reuse`
+- `[[13_面试训练/01_题目知识链/09_计算机基础/02_TCP四次挥手]]` → FIN / ACK / FIN / ACK
+- `TIME_WAIT状态` → 2MSL 等待，防止 ACK 丢失
+- `CLOSE_WAIT堆积` → 被动关闭方不调 close() 导致的问题
+- `TCP状态机` → `FIN_WAIT_1 → FIN_WAIT_2 → TIME_WAIT`
+- `Socket参数` → `SO_REUSEADDR` / `tcp_tw_reuse`
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **四次挥手过程**：
 
@@ -121,13 +119,12 @@ net.ipv4.ip_local_port_range = 10000 65535  # 扩大本地端口范围
 修复：检查代码，确保 finally 块里调 close()
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_计算机基础/TCP四次挥手]]` 主题文档，把没懂的地方填进去
+2. 打开 `[[13_面试训练/01_题目知识链/09_计算机基础/02_TCP四次挥手]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

@@ -17,7 +17,7 @@
 
 ```
 EXPLAIN 执行计划
-  → [[EXPLAIN执行计划]]
+  → [[06_数据库/04_SQL优化/EXPLAIN执行计划]]
     → 核心字段
       → id：查询序号，越大越先执行（子查询）
       → select_type：查询类型（SIMPLE / PRIMARY / SUBQUERY / DERIVED）
@@ -79,4 +79,4 @@ system ≈ const > eq_ref > ref > range > index > ALL
 
 ## 下一步
 
-打开 [[EXPLAIN执行计划]]，对比 [[索引设计原则]]，补充链接：「EXPLAIN 是优化 SQL 的第一步——先看 type 是不是 ALL，再看 Extra 有没有 filesort/temporary，最后看 rows 估算是否合理」。
+打开 [[06_数据库/04_SQL优化/EXPLAIN执行计划]]，对比 [[06_数据库/02_索引/索引设计原则]]，补充链接：「EXPLAIN 是优化 SQL 的第一步——先看 type 是不是 ALL，再看 Extra 有没有 filesort/temporary，最后看 rows 估算是否合理」。

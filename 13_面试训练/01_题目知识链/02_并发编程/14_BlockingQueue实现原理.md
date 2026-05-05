@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[ReentrantLock与Condition]]` → BlockingQueue 的阻塞实现基础
-- `[[生产者消费者模式]]` → BlockingQueue 是最经典的实现方式
-- `[[线程池任务队列]]` → Array vs Linked vs SynchronousQueue 选型
-- `[[两把锁优化]]` → LinkedBlockingQueue 用 takeLock + putLock 提高并发
-- `[[SynchronousQueue]]` → 直接传递，不存元素
+- `ReentrantLock与Condition` → BlockingQueue 的阻塞实现基础
+- `[[13_面试训练/01_题目知识链/02_并发编程/17_生产者消费者模式实现]]` → BlockingQueue 是最经典的实现方式
+- `[[02_并发编程/08_线程池/线程池]]` → Array vs Linked vs SynchronousQueue 选型
+- `两把锁优化` → LinkedBlockingQueue 用 takeLock + putLock 提高并发
+- `SynchronousQueue` → 直接传递，不存元素
 
 ---
 
@@ -46,8 +46,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **BlockingQueue 核心：Condition 等待/唤醒**：
 ```java
@@ -95,13 +93,12 @@ public void put(E e) throws InterruptedException {
 - 容量 = 0，每一个 put 必须等待一个 take（反之亦然）
 - 适合「直接交付」场景，线程池用它避免任务堆积
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[BlockingQueue]]` 主题文档，把 Array vs Linked 的锁机制补充完整
-3. 在 Obsidian 里建双向链接：`[[02_并发编程/线程池核心参数]]` 关联学习（任务队列选型）
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[13_面试训练/01_题目知识链/02_并发编程/14_BlockingQueue实现原理]]` 主题文档，把 Array vs Linked 的锁机制补充完整
+3. 在 Obsidian 里建双向链接：`[[02_并发编程/08_线程池/线程池]]` 关联学习（任务队列选型）
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[HashMap底层结构]]` → CHM 的基础是 HashMap（数组+链表+红黑树）
-- `[[synchronized锁升级]]` → JDK8 中 CHM 用 synchronized 锁单个桶，锁升级对它有影响吗？
-- `[[CAS操作]]` → 无锁化的核心，但 ABA 问题怎么处理？
-- `[[分段锁vs细粒度锁]]` → 设计演进背后的权衡
-- `[[size()的精确性]]` → JDK7 用 tryLock 多次重试，JDK8 用 CounterCell
+- `[[01_Java核心/05_集合框架/HashMap]]` → CHM 的基础是 HashMap（数组+链表+红黑树）
+- `[[13_面试训练/01_题目知识链/02_并发编程/01_synchronized锁升级]]` → JDK8 中 CHM 用 synchronized 锁单个桶，锁升级对它有影响吗？
+- `[[13_面试训练/01_题目知识链/02_并发编程/11_CAS操作与ABA问题]]` → 无锁化的核心，但 ABA 问题怎么处理？
+- `分段锁vs细粒度锁` → 设计演进背后的权衡
+- `size()的精确性` → JDK7 用 tryLock 多次重试，JDK8 用 CounterCell
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **JDK7：分段锁（Segment）**
 ```
@@ -82,13 +80,12 @@ if (tab == null 或 桶为空) {
 }
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[ConcurrentHashMap]]` 主题文档，把 JDK7/JDK8 差异补充完整
+2. 打开 `[[01_Java核心/05_集合框架/ConcurrentHashMap]]` 主题文档，把 JDK7/JDK8 差异补充完整
 3. 在 Obsidian 里建双向链接：`[[07_中间件/Redis线程模型]]` 对比参考（Redis 也是单线程+IO多路复用）
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

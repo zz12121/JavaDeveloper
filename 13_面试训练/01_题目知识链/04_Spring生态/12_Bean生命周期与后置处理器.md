@@ -17,7 +17,7 @@
 
 ```
 Bean 生命周期（完整版）
-  → [[IoC容器]] → BeanDefinition → 实例化 → 属性赋值 → 初始化 → 销毁
+  → [[04_Spring生态/01_Spring核心/IoC容器]] → BeanDefinition → 实例化 → 属性赋值 → 初始化 → 销毁
     → 1. BeanFactoryPostProcessor（容器启动阶段，修改 BeanDefinition）
       → 在所有 Bean 实例化之前执行
       → 可以修改 BeanDefinition 的元信息（propertyValues / scope 等）
@@ -77,4 +77,4 @@ Bean 生命周期（完整版）
 
 ## 下一步
 
-打开 [[BeanDefinition]]，补充 `[[双向链接]]`：「Bean 生命周期的每个阶段都暴露了扩展点，理解每个扩展点的时机是掌握 Spring 的关键」。
+打开 [[04_Spring生态/04_Spring原理深入/BeanDefinition]]，补充 `双向链接`：「Bean 生命周期的每个阶段都暴露了扩展点，理解每个扩展点的时机是掌握 Spring 的关键」。

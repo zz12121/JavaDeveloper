@@ -17,7 +17,7 @@
 
 ```
 RabbitMQ 架构
-  → [[RabbitMQ架构与交换机]]
+  → [[07_中间件/02_消息队列/RabbitMQ架构与交换机]]
     → 核心组件
       → Producer：发送消息，不直接和 Queue 打交道
       → Exchange：交换机，接收 Producer 消息，按规则路由到 Queue
@@ -67,4 +67,4 @@ RabbitMQ 架构
 
 ## 下一步
 
-打开 [[RabbitMQ架构与交换机]]，对比 [[MQ核心概念]]，补充链接：「RabbitMQ 的交换机是『路由规则』，Kafka 的 Topic 是『日志流』——两者模型不同，导致适用场景不同」。
+打开 [[07_中间件/02_消息队列/RabbitMQ架构与交换机]]，对比 [[09_工程化/04_Kubernetes/核心概念]]，补充链接：「RabbitMQ 的交换机是『路由规则』，Kafka 的 Topic 是『日志流』——两者模型不同，导致适用场景不同」。

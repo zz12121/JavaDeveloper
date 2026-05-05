@@ -18,7 +18,7 @@
 
 ```
 Spring 事件驱动模型
-  → [[ApplicationContext]] → 事件发布与监听
+  → [[13_面试训练/01_题目知识链/04_Spring生态/08_上下文刷新]] → 事件发布与监听
     → 1. 核心角色（观察者模式）
       → ApplicationEventPublisher：事件发布者（ApplicationContext 实现了它）
       → ApplicationListener<E extends ApplicationEvent>：事件监听器
@@ -91,5 +91,5 @@ Spring 事件驱动模型
 
 ## 下一步
 
-打开 [[ApplicationContext]]，补充 `[[双向链接]]`：「Spring 事件机制是观察者模式的应用——publishEvent() 解耦了业务逻辑的执行时机和执行者」。
+打开 [[13_面试训练/01_题目知识链/04_Spring生态/08_上下文刷新]]，补充 `双向链接`：「Spring 事件机制是观察者模式的应用——publishEvent() 解耦了业务逻辑的执行时机和执行者」。
 

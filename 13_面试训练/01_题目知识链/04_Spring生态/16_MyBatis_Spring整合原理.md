@@ -18,7 +18,7 @@
 
 ```
 MyBatis-Spring 整合
-  → [[MyBatis]] + [[事务管理]]
+  → [[05_持久层框架/01_MyBatis/00_概览]] + [[05_持久层框架/01_MyBatis/08_事务管理]]
     → 1. SqlSessionFactoryBean（工厂 Bean）
       → 实现 FactoryBean<SqlSessionFactory>
         → getObject() 返回 SqlSessionFactory
@@ -88,4 +88,4 @@ MyBatis-Spring 整合
 
 ## 下一步
 
-打开 [[MyBatis]]，补充 `[[双向链接]]`：「MyBatis-Spring 整合的本质是：Mapper 接口 → 动态代理 → Spring 管理 SqlSession 生命周期 → 事务统一由 Spring 控制」。
+打开 [[05_持久层框架/01_MyBatis/00_概览]]，补充 `双向链接`：「MyBatis-Spring 整合的本质是：Mapper 接口 → 动态代理 → Spring 管理 SqlSession 生命周期 → 事务统一由 Spring 控制」。

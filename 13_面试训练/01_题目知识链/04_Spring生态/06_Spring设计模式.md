@@ -17,7 +17,7 @@
 
 ```
 Spring 设计模式
-  → [[Spring设计模式]]
+  → [[04_Spring生态/01_Spring核心/Spring设计模式]]
     → 工厂模式
       → BeanFactory / FactoryBean
       → BeanFactory 根据 BeanDefinition 创建 Bean
@@ -26,15 +26,15 @@ Spring 设计模式
       → Spring 默认单例（singleton Bean）
       → 非线程安全，所以 Bean 里不要有可变成员变量
     → 代理模式
-      → AOP [[AOP]]：Spring AOP 基于 JDK 动态代理 / CGLib
-      → JPA [[事务管理]]：EntityManager 背后是 Hibernate 代理
+      → AOP [[04_Spring生态/01_Spring核心/AOP]]：Spring AOP 基于 JDK 动态代理 / CGLib
+      → JPA [[05_持久层框架/01_MyBatis/08_事务管理]]：EntityManager 背后是 Hibernate 代理
     → 模板方法模式
       → JdbcTemplate / RestTemplate / RedisTemplate
       → 固定流程抽象出来，可变步骤由子类实现
       → JdbcTemplate.query()：模板方法，ResultSetExtractor 由调用者提供
     → 策略模式
       → IoC 容器：根据 @Conditional 条件选择不同的实现
-      → [[Spring Boot自动配置]]：根据 classpath 选择配置
+      → Spring Boot自动配置：根据 classpath 选择配置
     → 观察者模式
       → ApplicationContext 事件机制：ApplicationEventPublisher → ApplicationListener
       → Spring Boot 启动时的监听器链：SpringApplicationRunListeners
@@ -74,4 +74,4 @@ Spring 设计模式
 
 ## 下一步
 
-打开 [[Spring设计模式]]，补充 `[[双向链接]]`：「Spring 设计模式的精髓在『模板方法』——JdbcTemplate 把 JDBC 流程固化了，可变部分（SQL + 结果解析）由你实现」。
+打开 [[04_Spring生态/01_Spring核心/Spring设计模式]]，补充 `双向链接`：「Spring 设计模式的精髓在『模板方法』——JdbcTemplate 把 JDBC 流程固化了，可变部分（SQL + 结果解析）由你实现」。

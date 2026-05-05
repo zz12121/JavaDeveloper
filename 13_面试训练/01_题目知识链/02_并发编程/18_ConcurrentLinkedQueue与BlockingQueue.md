@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[CAS无锁算法]]` → ConcurrentLinkedQueue 的入队/出队全程无锁
-- `[[BlockingQueue实现]]` → 两把锁 vs 一把锁
-- `[[Michael-Scott算法]]` → ConcurrentLinkedQueue 使用的经典无锁队列算法
+- `CAS无锁算法` → ConcurrentLinkedQueue 的入队/出队全程无锁
+- `[[13_面试训练/01_题目知识链/02_并发编程/14_BlockingQueue实现原理]]` → 两把锁 vs 一把锁
+- `Michael-Scott算法` → ConcurrentLinkedQueue 使用的经典无锁队列算法
 - `[[wait/notify替代方案]]` → 不阻塞就轮询，CPU 空转问题
-- `[[线程池任务队列选型]]` → Array/Linked/Synchronous 各自适用
+- `[[02_并发编程/08_线程池/线程池]]` → Array/Linked/Synchronous 各自适用
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **核心区别一句话**：BlockingQueue 用锁 + Condition 实现阻塞等待；ConcurrentLinkedQueue 用 CAS 实现无锁，不阻塞。
 
@@ -89,13 +87,12 @@ boolean offer(E e) {
 | 需要限流 | `Semaphore` + `ConcurrentLinkedQueue` |
 | 单生产者多消费者 | JCTools 的 `MpscQueue`（更优） |
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[并发队列选型]]` 文档，把无锁 vs 阻塞的选型决策树补充进去
-3. 在 Obsidian 里建双向链接：`[[02_并发编程/BlockingQueue实现原理]]` ←→ 本卡片
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `并发队列选型` 文档，把无锁 vs 阻塞的选型决策树补充进去
+3. 在 Obsidian 里建双向链接：`[[13_面试训练/01_题目知识链/02_并发编程/14_BlockingQueue实现原理]]` ←→ 本卡片
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

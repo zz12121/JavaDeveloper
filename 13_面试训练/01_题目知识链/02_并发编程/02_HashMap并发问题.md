@@ -17,11 +17,11 @@
 
 ```
 HashMap 并发问题
-  → [[HashMap底层实现]] → 数组 + 链表/红黑树
+  → [[01_Java核心/05_集合框架/HashMap]] → 数组 + 链表/红黑树
     → put 流程：hash → 寻址 → 插入
       → resize 流程：新建数组 → 迁移元素
         → JDK 7：头插法 → 并发迁移时链表会成环
-          → [[ConcurrentHashMap]] 怎么解决？ → JDK 7 用了 Segment 分段锁
+          → [[01_Java核心/05_集合框架/ConcurrentHashMap]] 怎么解决？ → JDK 7 用了 Segment 分段锁
         → JDK 8：尾插法 + synchronized 头节点 → 仍可能丢数据但不环
   → 并发安全替代方案
     → Hashtable（全局锁）→ 性能差
@@ -55,4 +55,4 @@ HashMap 并发问题
 
 ## 下一步
 
-打开 [[HashMap底层实现]] 文档，添加一条 `[[双向链接]]`：「并发下 HashMap 会成环，这个坑JDK 8 用尾插法部分解决了，但根本解法是换 ConcurrentHashMap」。
+打开 [[01_Java核心/05_集合框架/HashMap]] 文档，添加一条 `双向链接`：「并发下 HashMap 会成环，这个坑JDK 8 用尾插法部分解决了，但根本解法是换 ConcurrentHashMap」。

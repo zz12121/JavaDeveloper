@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[volatile原理]]` → 内存屏障、禁止指令重排
-- `[[CPU缓存一致性]]` → MESI 协议，Store Buffer，Invalid Queue
-- `[[happens-before]]` → JMM 的核心抽象，比"锁和volatile"更好记
-- `[[指令重排]]` → 编译器重排、CPU 乱序执行
-- `[[double-check单例]]` → 经典可见性+原子性综合题
+- `[[02_并发编程/02_JMM内存模型/volatile]]` → 内存屏障、禁止指令重排
+- `CPU缓存一致性` → MESI 协议，Store Buffer，Invalid Queue
+- `happens-before` → JMM 的核心抽象，比"锁和volatile"更好记
+- `指令重排` → 编译器重排、CPU 乱序执行
+- `double-check单例` → 经典可见性+原子性综合题
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **JMM vs JVM 内存结构（常混淆）**：
 - JVM 内存结构：堆、栈、方法区——描述的是**内存分区**
@@ -89,13 +87,12 @@ public static Singleton getInstance() {
 // 2和3可能重排，另一个线程拿到未初始化的对象 → volatile 禁止重排
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[JMM内存模型]]` 主题文档，把 happens-before 规则整理成表格
-3. 在 Obsidian 里建双向链接：`[[02_并发编程/volatile原理]]` ←→ 本卡片
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[02_并发编程/02_JMM内存模型/JMM内存模型]]` 主题文档，把 happens-before 规则整理成表格
+3. 在 Obsidian 里建双向链接：`[[02_并发编程/02_JMM内存模型/volatile]]` ←→ 本卡片
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

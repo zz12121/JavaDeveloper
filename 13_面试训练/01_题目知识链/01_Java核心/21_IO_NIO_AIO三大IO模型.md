@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[Reactor模式]]` → NIO 的核心设计模式，Netty 的基石
-- `[[IO多路复用]]` → select/poll/epoll，NIO 的底层实现
-- `[[零拷贝]]` → NIO 的 `transferTo()`，高性能 IO 的关键
-- `[[Netty线程模型]]` → 为什么 Netty 选 NIO 而不是 AIO
-- `[[Linux IO模型]]` → 阻塞/非阻塞、同步/异步的系统调用层面
+- `Reactor模式` → NIO 的核心设计模式，Netty 的基石
+- `IO多路复用` → select/poll/epoll，NIO 的底层实现
+- `[[01_Java核心/06_IO与NIO/零拷贝]]` → NIO 的 `transferTo()`，高性能 IO 的关键
+- `Netty线程模型` → 为什么 Netty 选 NIO 而不是 AIO
+- `[[10_计算机基础/02_操作系统/IO模型]]` → 阻塞/非阻塞、同步/异步的系统调用层面
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **三大模型对比**：
 
@@ -90,13 +88,12 @@ FileChannel dest = ...;
 src.transferTo(0, size, dest);  // 底层用 sendfile 系统调用
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[NIO]]` 和 `[[Reactor模式]]` 主题文档，补充 Reactor 三种模型（单线程/多线程/主从）
+2. 打开 `[[01_Java核心/06_IO与NIO/NIO]]` 和 `Reactor模式` 主题文档，补充 Reactor 三种模型（单线程/多线程/主从）
 3. 在 Obsidian 里建双向链接：`[[09_计算机基础/epoll]]` ←→ 本卡片
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

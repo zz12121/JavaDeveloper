@@ -17,7 +17,7 @@
 
 ```
 SpringBoot 自动配置
-  → [[SpringBoot自动配置]]
+  → [[13_面试训练/01_题目知识链/04_Spring生态/04_SpringBoot自动配置]]
     → 核心注解：@EnableAutoConfiguration
       → 放在 @SpringBootApplication 里（复合注解）
       → 通过 @Import(AutoConfigurationImportSelector.class) 生效
@@ -77,4 +77,4 @@ SpringBoot 自动配置
 
 ## 下一步
 
-打开 [[SpringBoot自动配置]]，补充 `[[双向链接]]`：「自动配置的本质是『条件化注册 Bean』——有这个依赖就配，没有就不配，用户配了就让用户自己决定」。
+打开 [[13_面试训练/01_题目知识链/04_Spring生态/04_SpringBoot自动配置]]，补充 `双向链接`：「自动配置的本质是『条件化注册 Bean』——有这个依赖就配，没有就不配，用户配了就让用户自己决定」。

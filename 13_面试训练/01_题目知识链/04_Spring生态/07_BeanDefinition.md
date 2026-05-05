@@ -17,7 +17,7 @@
 
 ```
 BeanDefinition
-  → [[BeanDefinition]]
+  → [[04_Spring生态/04_Spring原理深入/BeanDefinition]]
     → 作用：描述一个 Bean 的元信息
       → BeanClassName：全限定类名
       → Scope：singleton / prototype
@@ -59,4 +59,4 @@ BeanDefinition
 
 ## 下一步
 
-打开 [[BeanDefinition]]，补充 `[[双向链接]]`：「BeanDefinition 是 Spring IoC 容器的基础——没有 BeanDefinition，容器就不知道该怎么创建 Bean」。
+打开 [[04_Spring生态/04_Spring原理深入/BeanDefinition]]，补充 `双向链接`：「BeanDefinition 是 Spring IoC 容器的基础——没有 BeanDefinition，容器就不知道该怎么创建 Bean」。

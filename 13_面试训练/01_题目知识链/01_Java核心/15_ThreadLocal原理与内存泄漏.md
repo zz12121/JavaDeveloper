@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[四种引用类型]]` → 弱引用（WeakReference）在 ThreadLocalMap 中的应用
-- `[[线程池内存泄漏]]` → 核心线程不退，value 永远不被回收
-- `[[HashMap冲突处理]]` → ThreadLocalMap 用线性探测法，不是链表
-- `[[InheritableThreadLocal]]` → 子线程如何继承父线程的 ThreadLocal
-- `[[Spring事务上下文]]` → TransactionSynchronizationManager 用 ThreadLocal 存连接
+- `四种引用类型` → 弱引用（WeakReference）在 ThreadLocalMap 中的应用
+- `[[02_并发编程/08_线程池/线程池]]` → 核心线程不退，value 永远不被回收
+- `[[01_Java核心/05_集合框架/HashMap]]` → ThreadLocalMap 用线性探测法，不是链表
+- `InheritableThreadLocal` → 子线程如何继承父线程的 ThreadLocal
+- `Spring事务上下文` → TransactionSynchronizationManager 用 ThreadLocal 存连接
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **存储位置（重点）**：
 ```java
@@ -86,13 +84,12 @@ try {
 - 在 `Thread.init()` 时，把父线程的 inheritableThreadLocals 复制给子线程
 - 局限：线程池场景下，任务是在已有的线程里跑的，不会触发复制
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[ThreadLocal]]` 主题文档，画出 Thread → ThreadLocalMap → Entry 的引用关系图
-3. 在 Obsidian 里建双向链接：`[[02_并发编程/线程池]]` 关联学习（线程池 + ThreadLocal 是经典坑）
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[02_并发编程/12_ThreadLocal/ThreadLocal线程本地变量]]` 主题文档，画出 Thread → ThreadLocalMap → Entry 的引用关系图
+3. 在 Obsidian 里建双向链接：`[[02_并发编程/08_线程池/线程池]]` 关联学习（线程池 + ThreadLocal 是经典坑）
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

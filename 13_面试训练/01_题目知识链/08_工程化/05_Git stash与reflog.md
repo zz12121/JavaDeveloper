@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[Git stash]]` → 工作现场的临时保存与恢复
-- `[[Git reflog]]` → 本地操作历史，不参与 push，是「后悔药」
-- `[[Git reset]]` → 三种模式（soft/mixed/hard）对暂存区和工作目录的影响
-- `[[Git rebase的危险]]` → 为什么 rebase 后的分支 push 到远程有风险？
-- `[[Git cherry-pick]]` → 和 stash 的区别，cherry-pick 是捡哪个 commit？
+- `[[13_面试训练/01_题目知识链/08_工程化/05_Git stash与reflog]]` → 工作现场的临时保存与恢复
+- `Git reflog` → 本地操作历史，不参与 push，是「后悔药」
+- `Git reset` → 三种模式（soft/mixed/hard）对暂存区和工作目录的影响
+- `Git rebase的危险` → 为什么 rebase 后的分支 push 到远程有风险？
+- `Git cherry-pick` → 和 stash 的区别，cherry-pick 是捡哪个 commit？
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **stash vs reflog**：
 
@@ -98,13 +96,12 @@ git stash list
 - stash 对象默认 90 天后被 gc 清理（可通过配置修改）
 - reflog 默认 90 天后被 gc 清理
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_工程化/Git stash与reflog]]` 主题文档，把没懂的地方填进去
+2. 打开 `[[13_面试训练/01_题目知识链/08_工程化/05_Git stash与reflog]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

@@ -17,7 +17,7 @@
 
 ```
 AOP 代理机制
-  → [[AOP原理]]
+  → [[04_Spring生态/01_Spring核心/AOP]]
     → 1. AOP 核心概念
       → Aspect（切面）：= Pointcut + Advice
       → JoinPoint（连接点）：程序执行点（方法调用 / 异常抛出）
@@ -87,4 +87,4 @@ AOP 代理机制
 
 ## 下一步
 
-打开 [[AOP原理]]，补充 `[[双向链接]]`：「AOP 的本质是代理模式——JDK 代理基于接口，CGLIB 基于继承；SpringBoot 默认 CGLIB 是因为它不要求目标类实现接口」。
+打开 [[04_Spring生态/01_Spring核心/AOP]]，补充 `双向链接`：「AOP 的本质是代理模式——JDK 代理基于接口，CGLIB 基于继承；SpringBoot 默认 CGLIB 是因为它不要求目标类实现接口」。

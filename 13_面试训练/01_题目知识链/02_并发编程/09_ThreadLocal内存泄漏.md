@@ -18,7 +18,7 @@
 
 ```
 ThreadLocal 线程本地变量
-  → [[ThreadLocal线程本地变量]]
+  → [[02_并发编程/12_ThreadLocal/ThreadLocal线程本地变量]]
     → 数据结构
       → ThreadLocalMap（Thread 类里）
         → ThreadLocal 作为 key（WeakReference）
@@ -36,7 +36,7 @@ ThreadLocal 线程本地变量
         → Entry.key 被 GC → value 泄漏
     → ThreadLocal 适合场景
       → 数据库连接、Session、用户上下文
-      → [[线程池]] → 线程复用 = 泄漏风险放大
+      → [[02_并发编程/08_线程池/线程池]] → 线程复用 = 泄漏风险放大
 ```
 
 ---
@@ -64,4 +64,4 @@ ThreadLocal 线程本地变量
 
 ## 下一步
 
-打开 [[ThreadLocal线程本地变量]]，补充 `[[双向链接]]`：「ThreadLocal 本身不泄漏，泄漏的是 ThreadLocalMap 里的 value——特别是线程池复用线程时，这个问题会被放大」。
+打开 [[02_并发编程/12_ThreadLocal/ThreadLocal线程本地变量]]，补充 `双向链接`：「ThreadLocal 本身不泄漏，泄漏的是 ThreadLocalMap 里的 value——特别是线程池复用线程时，这个问题会被放大」。

@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[ArrayList扩容机制]]` → 并发场景下扩容会导致什么
-- `[[fail-fast机制]]` → ConcurrentModificationException 的本质
-- `[[synchronized底层]]` → Vector / synchronizedList 的锁粒度
-- `[[COW副本思想]]` → 读写分离，适合读多写少
-- `[[并发集合对比]]` → 不同场景选哪个
+- `ArrayList扩容机制` → 并发场景下扩容会导致什么
+- `fail-fast机制` → ConcurrentModificationException 的本质
+- `synchronized底层` → Vector / synchronizedList 的锁粒度
+- `COW副本思想` → 读写分离，适合读多写少
+- `并发集合对比` → 不同场景选哪个
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **ArrayList 线程不安全的原因**：
 - 多线程同时 add，可能覆盖元素（size 计算错误）
@@ -72,13 +70,12 @@ synchronized (list) {
 | 并发读多写少 | CopyOnWriteArrayList |
 | 并发读写均衡 | synchronizedList 或 ConcurrentLinkedQueue（如果只需要队列）|
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[ArrayList]]` 和 `[[CopyOnWriteArrayList]]` 主题文档，补充细节
-3. 在 Obsidian 里建双向链接：`[[01_Java核心/ArrayList]]` ←→ 本卡片
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[02_并发编程/06_并发容器/CopyOnWriteArrayList/CopyOnWriteArrayList]]` 和 `[[02_并发编程/06_并发容器/CopyOnWriteArrayList/CopyOnWriteArrayList]]` 主题文档，补充细节
+3. 在 Obsidian 里建双向链接：`[[02_并发编程/06_并发容器/CopyOnWriteArrayList/CopyOnWriteArrayList]]` ←→ 本卡片
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[Cookie机制]]` → 浏览器存储，每次请求自动带上
-- `[[Session机制]]` → 服务器内存，用 SessionID（Cookie 里）查找
-- `[[分布式Session]]` → Session 复制 / Session 粘连 / 集中存储（Redis）
-- `[[JWT]]` → 不用 Session 的无状态认证方案
-- `[[Session固定攻击]]` → 登录后不换 SessionID 的安全漏洞
+- `Cookie机制` → 浏览器存储，每次请求自动带上
+- `Session机制` → 服务器内存，用 SessionID（Cookie 里）查找
+- `分布式Session` → Session 复制 / Session 粘连 / 集中存储（Redis）
+- `[[04_Spring生态/05_SpringSecurity/JWT与OAuth2]]` → 不用 Session 的无状态认证方案
+- `Session固定攻击` → 登录后不换 SessionID 的安全漏洞
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **Cookie vs Session**：
 
@@ -112,13 +110,12 @@ fetch('/api/user', {
 })
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_计算机基础/Cookie与Session]]` 主题文档
+2. 打开 `[[13_面试训练/01_题目知识链/09_计算机基础/08_Cookie与Session]]` 主题文档
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

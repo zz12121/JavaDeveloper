@@ -17,7 +17,7 @@
 
 ```
 IoC 容器
-  → [[IoC容器]]
+  → [[04_Spring生态/01_Spring核心/IoC容器]]
     → 核心思想：对象创建权交给容器（Inversion of Control）
       → 传统：A a = new A()（主动创建，强耦合）
       → IoC：容器在合适的时机，把依赖注入到需要的对象（被动接收）
@@ -35,7 +35,7 @@ IoC 容器
       → 初始化（@PostConstruct / afterPropertiesSet / init-method）
       → 销毁（@PreDestroy / destroy / destroy-method）
     → BeanDefinition
-      → [[BeanDefinition]] → 描述 Bean 的元数据（class / scope / initMethod / destroyMethod 等）
+      → [[04_Spring生态/04_Spring原理深入/BeanDefinition]] → 描述 Bean 的元数据（class / scope / initMethod / destroyMethod 等）
 ```
 
 ---
@@ -63,4 +63,4 @@ IoC 容器
 
 ## 下一步
 
-打开 [[IoC容器]]，补充 `[[双向链接]]`：「IoC 的本质是把『创建对象的权力』从业务代码转交给容器——降低耦合，提升可测试性」。
+打开 [[04_Spring生态/01_Spring核心/IoC容器]]，补充 `双向链接`：「IoC 的本质是把『创建对象的权力』从业务代码转交给容器——降低耦合，提升可测试性」。

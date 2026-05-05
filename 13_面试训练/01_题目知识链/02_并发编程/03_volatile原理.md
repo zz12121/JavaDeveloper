@@ -17,8 +17,8 @@
 
 ```
 volatile 的作用
-  → [[volatile关键字]]
-    → [[JMM内存模型]] → 8种 Happens-Before 规则
+  → [[02_并发编程/02_JMM内存模型/volatile]]
+    → [[02_并发编程/02_JMM内存模型/JMM内存模型]] → 8种 Happens-Before 规则
       → volatile 写 happens-before 后续 volatile 读
         → 禁止指令重排序：编译器/CPU 可能重排
           → 内存屏障：storestore / storeload / loadstore / loadload
@@ -27,10 +27,10 @@ volatile 的作用
           → 后续读从主存取，不走本地缓存
     → volatile 的局限性
       → 不保证原子性：i++ 这种 read-modify-write 不是原子的
-        → [[CAS与原子类]] → 用自旋 CAS 解决
-        → [[synchronized关键字]] → 用互斥解决
+        → [[02_并发编程/05_CAS与原子类/CAS与原子类]] → 用自旋 CAS 解决
+        → synchronized关键字 → 用互斥解决
   → double-check 单例
-    → [[JVM类加载机制]] → new Object() 不是原子操作
+    → [[03_JVM/03_类加载机制/类加载机制]] → new Object() 不是原子操作
       → 分配内存 → 调用构造方法 → 建立引用
       → 2和3可能重排 → 其他线程可能拿到未构造完的对象
       → volatile 禁止构造方法重排
@@ -63,4 +63,4 @@ volatile 的作用
 
 ## 下一步
 
-打开 [[volatile关键字]] 文档，对比 [[JMM内存模型]]，补充 `[[双向链接]]`：「volatile 的可见性靠的是内存屏障把本地缓存刷到主存，这背后是 JMM 的 Happens-Before 规则在保证」。
+打开 [[02_并发编程/02_JMM内存模型/volatile]] 文档，对比 [[02_并发编程/02_JMM内存模型/JMM内存模型]]，补充 `双向链接`：「volatile 的可见性靠的是内存屏障把本地缓存刷到主存，这背后是 JMM 的 Happens-Before 规则在保证」。

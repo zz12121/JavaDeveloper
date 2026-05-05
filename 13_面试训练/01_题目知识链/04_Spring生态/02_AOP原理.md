@@ -17,7 +17,7 @@
 
 ```
 AOP 面向切面编程
-  → [[AOP]]
+  → [[04_Spring生态/01_Spring核心/AOP]]
     → 核心概念
       → Aspect（切面）：切点和通知的结合
       → Join Point（连接点）：程序执行点（方法调用/异常抛出等）
@@ -34,7 +34,7 @@ AOP 面向切面编程
         → 目标类实现了接口 → JDK 动态代理
         → 目标类没实现接口 → CGLib
     → 事务实现
-      → [[事务管理]] → TransactionInterceptor → AOP 拦截 @Transactional 方法
+      → [[05_持久层框架/01_MyBatis/08_事务管理]] → TransactionInterceptor → AOP 拦截 @Transactional 方法
         → 开启事务 → 执行业务 → 正常提交 / 异常回滚
 ```
 
@@ -69,4 +69,4 @@ AOP 面向切面编程
 
 ## 下一步
 
-打开 [[AOP]]，补充 `[[双向链接]]`：「AOP 的本质是动态代理——JDK 动态代理要求接口，CGLib 通过继承实现，两者在 Spring 里自动切换」。
+打开 [[04_Spring生态/01_Spring核心/AOP]]，补充 `双向链接`：「AOP 的本质是动态代理——JDK 动态代理要求接口，CGLib 通过继承实现，两者在 Spring 里自动切换」。

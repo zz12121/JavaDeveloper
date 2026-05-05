@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[Docker镜像层]]` → 写时复制（COW），每一层只读
-- `[[Docker多阶段构建]]` → 构建时用 maven 镜像，运行只用 JRE 镜像
-- `[[Docker网络模式]]` → bridge / host / overlay / none
-- `[[容器与JVM]]` → JDK 10+ 自动感知容器 cgroup 内存限制
-- `[[Docker存储卷]]` → `VOLUME` 声明的数据卷，绕过 UnionFS
+- `Docker镜像层` → 写时复制（COW），每一层只读
+- `Docker多阶段构建` → 构建时用 maven 镜像，运行只用 JRE 镜像
+- `Docker网络模式` → bridge / host / overlay / none
+- `容器与JVM` → JDK 10+ 自动感知容器 cgroup 内存限制
+- `[[13_面试训练/01_题目知识链/08_工程化/09_Docker存储卷]]` → `VOLUME` 声明的数据卷，绕过 UnionFS
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **镜像 vs 容器 vs 仓库**：
 
@@ -95,7 +93,6 @@ JDK 11+         ：默认开启 UseContainerSupport
 4. 把变化少的层放上面（依赖层先 COPY pom.xml 再 COPY 代码）
 5. 不使用 root 用户运行容器
 
-</details>
 
 ---
 
@@ -104,4 +101,4 @@ JDK 11+         ：默认开启 UseContainerSupport
 1. 盲答后，对比参考要点，找到卡壳的地方
 2. 打开 `[[09_工程化/Docker最佳实践]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

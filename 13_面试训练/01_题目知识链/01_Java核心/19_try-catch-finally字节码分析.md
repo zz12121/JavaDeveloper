@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[字节码异常表]]` → Exception Table，finally 的字节码会被复制
-- `[[return字节码指令]]` → ireturn/areturn 等，操作数栈的变化
-- `[[JVM规范异常处理]]` → jsr/ret（旧版）vs 复制语义（新版）
-- `[[资源泄漏]]` → 为什么 try-finally 不推荐，应该用 try-with-resources
-- `[[面试题陷阱]]` → 经典笔试题：`public int test() { try{ return 1; } finally { return 2; } }`
+- `字节码异常表` → Exception Table，finally 的字节码会被复制
+- `return字节码指令` → ireturn/areturn 等，操作数栈的变化
+- `[[01_Java核心/03_异常处理/异常处理]]` → jsr/ret（旧版）vs 复制语义（新版）
+- `资源泄漏` → 为什么 try-finally 不推荐，应该用 try-with-resources
+- `面试题陷阱` → 经典笔试题：`public int test() { try{ return 1; } finally { return 2; } }`
 
 ---
 
@@ -48,8 +48,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **核心结论（必记）**：
 - **finally 里有 return → 覆盖 try/catch 的 return**
@@ -100,13 +98,12 @@ try (BufferedReader br = new BufferedReader(...)) {
 ```
 比 try-finally 更安全（异常不会掩盖真正的问题）
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[异常处理字节码]]` 主题文档，把 finally 的字节码复制机制画出来
-3. 在 Obsidian 里建双向链接：`[[01_Java核心/异常处理]]` ←→ 本卡片
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[01_Java核心/03_异常处理/异常处理]]` 主题文档，把 finally 的字节码复制机制画出来
+3. 在 Obsidian 里建双向链接：`[[01_Java核心/03_异常处理/异常处理]]` ←→ 本卡片
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

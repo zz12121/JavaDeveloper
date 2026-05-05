@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[equals和hashCode契约]]` → 三条必须满足的契约
-- `[[HashMap原理]]` → 底层数组 + 链表 / 红黑树，hashCode 决定落在哪个桶
-- `[[HashSet原理]]` → `HashSet<E>` = `HashMap<E, Object>`（dummy value）
-- `[[Object.hash]]` → JDK 7+ 提供的 hash 组合工具方法
-- `[[Objects.equals]]` → JDK 7+ 的空指针安全的 equals 工具
+- `equals和hashCode契约` → 三条必须满足的契约
+- `[[01_Java核心/05_集合框架/HashMap]]` → 底层数组 + 链表 / 红黑树，hashCode 决定落在哪个桶
+- `HashSet原理` → `HashSet<E>` = `HashMap<E, Object>`（dummy value）
+- `Object.hash` → JDK 7+ 提供的 hash 组合工具方法
+- `Objects.equals` → JDK 7+ 的空指针安全的 equals 工具
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **equals/hashCode 契约**（Java Language Specification）：
 
@@ -105,13 +103,12 @@ public int hashCode() {
 - 用 `==` 比较 key（不是 equals）
 - 不走常规哈希表逻辑，不维护数组结构
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[01_Java核心/hashCode与equals]]` 主题文档，把没懂的地方填进去
+2. 打开 `[[13_面试训练/01_题目知识链/01_Java核心/08_hashCode与equals]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

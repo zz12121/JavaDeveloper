@@ -17,7 +17,7 @@
 
 ```
 MVCC 多版本并发控制
-  → [[MVCC多版本并发控制]]
+  → [[06_数据库/03_事务与锁/MVCC多版本并发控制]]
     → 核心思想：不加锁的读，通过版本链实现
       → 每行数据有多个历史版本（undo log 链）
       → 读操作读哪个版本 → 由 Read View 决定
@@ -73,4 +73,4 @@ Read View: m_ids={100, 101}, min=100, max=102
 
 ## 下一步
 
-打开 [[MVCC多版本并发控制]]，对比 [[undo log]]（如果知识库有这个节点），补充链接：「MVCC 靠 undo log 版本链 + Read View 实现非锁定读，RC 和 RR 的核心区别就是 Read View 的生成时机」。
+打开 [[06_数据库/03_事务与锁/MVCC多版本并发控制]]，对比 undo log（如果知识库有这个节点），补充链接：「MVCC 靠 undo log 版本链 + Read View 实现非锁定读，RC 和 RR 的核心区别就是 Read View 的生成时机」。

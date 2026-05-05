@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[Unsafe类]]` → Java 直接调用 native CAS 的入口
-- `[[ABA问题]]` → 版本号思想，数据库乐观锁也用
-- `[[原子类]]` → AtomicInteger/AtomicReference 底层都是 CAS
-- `[[自旋锁]]` → CAS + 循环，高并发下 CPU 开销大
-- `[[LongAdder分段思想]]` → 缓解 CAS 热点问题的方案
+- `Unsafe类` → Java 直接调用 native CAS 的入口
+- `[[13_面试训练/01_题目知识链/02_并发编程/11_CAS操作与ABA问题]]` → 版本号思想，数据库乐观锁也用
+- `[[02_并发编程/05_CAS与原子类/CAS与原子类]]` → AtomicInteger/AtomicReference 底层都是 CAS
+- `自旋锁` → CAS + 循环，高并发下 CPU 开销大
+- `LongAdder分段思想` → 缓解 CAS 热点问题的方案
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **CAS 本质**：Compare-And-Swap，是一条 CPU 原子指令（cmpxchg）。
 ```java
@@ -83,13 +81,12 @@ compareAndSet(expectedRef, newRef, expectedStamp, newStamp);
 - Java 不直接暴露 CAS，通过 `sun.misc.Unsafe`（JDK8）或 `VarHandle`（JDK9+）
 - 名字叫「Unsafe」是因为可以直接操作内存地址，非常危险
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[CAS操作]]` 主题文档，把 ABA + AtomicStampedReference 整理进去
-3. 在 Obsidian 里建双向链接：`[[02_并发编程/AQS]]` ←→ 本卡片（AQS 底层也是 CAS）
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[13_面试训练/01_题目知识链/02_并发编程/11_CAS操作与ABA问题]]` 主题文档，把 ABA + AtomicStampedReference 整理进去
+3. 在 Obsidian 里建双向链接：`[[02_并发编程/04_AQS/AQS]]` ←→ 本卡片（AQS 底层也是 CAS）
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

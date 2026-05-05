@@ -17,7 +17,7 @@
 
 ```
 Kafka 高可靠
-  → [[Kafka高可靠与高吞吐]]
+  → [[07_中间件/02_消息队列/Kafka高可靠与高吞吐]]
     → Producer 端保证
       → acks 配置
         → acks=0：发出去就返回，不管是否到达（最快，最容易丢）
@@ -29,7 +29,7 @@ Kafka 高可靠
       → 手动提交 offset（enable.auto.commit=false）
         → 先处理业务，再提交 offset
         → 业务处理失败 → 不提交 offset → 重试
-      → 幂等消费：业务层实现幂等（[[幂等性设计]]）
+      → 幂等消费：业务层实现幂等（[[08_分布式与架构/05_高可用设计/幂等性设计]]）
     → Exactly-Once 语义
       → Kafka 0.11+ 事务：Producer 事务 + 消费者事务
       → Producer 事务：多分区操作的原子性
@@ -66,4 +66,4 @@ Kafka 高可靠
 
 ## 下一步
 
-打开 [[Kafka高可靠与高吞吐]]，补充 `[[双向链接]]`：「Kafka 的高可靠是一套组合拳——Producer 端 acks=all + ISR + 幂等，Consumer 端手动 offset + 幂等」。
+打开 [[07_中间件/02_消息队列/Kafka高可靠与高吞吐]]，补充 `双向链接`：「Kafka 的高可靠是一套组合拳——Producer 端 acks=all + ISR + 幂等，Consumer 端手动 offset + 幂等」。

@@ -17,7 +17,7 @@
 
 ```
 Spring Boot 自动配置
-  → [[自动配置源码]]
+  → [[04_Spring生态/04_Spring原理深入/自动配置源码]]
     → @SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan
       → @EnableAutoConfiguration：触发自动配置
         → @Import(AutoConfigurationImportSelector.class)
@@ -61,4 +61,4 @@ Spring Boot 自动配置
 
 ## 下一步
 
-打开 [[自动配置源码]]，补充 `[[双向链接]]`：「自动配置的精髓在 @ConditionalOnMissingBean——它保证用户定义的 Bean 优先，自动配置只做『兜底』」。
+打开 [[04_Spring生态/04_Spring原理深入/自动配置源码]]，补充 `双向链接`：「自动配置的精髓在 @ConditionalOnMissingBean——它保证用户定义的 Bean 优先，自动配置只做『兜底』」。

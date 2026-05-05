@@ -17,7 +17,7 @@
 
 ```
 Spring Cloud Gateway
-  → [[Spring Cloud网关]]
+  → [[04_Spring生态/03_SpringCloud/网关]]
     → 架构
       → 响应式编程：基于 WebFlux（Netty + Reactor）
         → 非阻塞 IO：单线程处理高并发请求（不用传统 Servlet 线程池）
@@ -65,4 +65,4 @@ Spring Cloud Gateway
 
 ## 下一步
 
-打开 [[Spring Cloud网关]]，关联 [[限流]] / [[熔断与降级]]，补充链接：「Gateway 的 Filter 链是 AOP 思想在网关层的体现——Pre Filter 做认证/限流，Post Filter 做监控/响应处理」。
+打开 [[04_Spring生态/03_SpringCloud/网关]]，关联 [[08_分布式与架构/05_高可用设计/限流算法]] / [[13_面试训练/01_题目知识链/07_分布式与架构/10_熔断与降级]]，补充链接：「Gateway 的 Filter 链是 AOP 思想在网关层的体现——Pre Filter 做认证/限流，Post Filter 做监控/响应处理」。

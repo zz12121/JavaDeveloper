@@ -17,7 +17,7 @@
 
 ```
 Spring Boot 启动原理
-  → [[Spring Boot启动原理]]
+  → [[04_Spring生态/02_SpringBoot/启动原理]]
     → 阶段一：SpringApplication 构造
       → 推断应用类型（Web / 非 Web / Reactive）
       → 加载 ApplicationContextInitializer（META-INF/spring.factories）
@@ -44,7 +44,7 @@ Spring Boot 启动原理
 
 | 追问 | 考点 |
 |------|------|
-| `refresh()` 方法是干什么的？ | [[上下文刷新]] → 核心九大步骤，真正初始化容器 |
+| `refresh()` 方法是干什么的？ | [[04_Spring生态/04_Spring原理深入/上下文刷新]] → 核心九大步骤，真正初始化容器 |
 | `ApplicationRunner` 和 `CommandLineRunner` 的区别？ | ApplicationRunner 接收 ApplicationArguments，CommandLineRunner 接收 String[] |
 | 如何在启动过程中插手？ | 实现 ApplicationContextInitializer / ApplicationListener |
 | 为什么 Spring Boot 启动快？ | 自动配置（按需加载）+ 内嵌容器（不用部署 WAR） |
@@ -71,4 +71,4 @@ SpringApplication.run()
 
 ## 下一步
 
-打开 [[Spring Boot启动原理]]，关联 [[上下文刷新]]，补充链接：「启动流程的核心在 `refresh()`——它完成了 BeanFactory 准备、后处理器执行、单例 Bean 初始化等所有工作」。
+打开 [[04_Spring生态/02_SpringBoot/启动原理]]，关联 [[04_Spring生态/04_Spring原理深入/上下文刷新]]，补充链接：「启动流程的核心在 `refresh()`——它完成了 BeanFactory 准备、后处理器执行、单例 Bean 初始化等所有工作」。

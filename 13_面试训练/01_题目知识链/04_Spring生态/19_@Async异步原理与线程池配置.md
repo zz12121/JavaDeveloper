@@ -18,7 +18,7 @@
 
 ```
 @Async 异步执行
-  → [[Spring异步]]
+  → Spring异步
     → 1. 启用异步：@EnableAsync
       → 导入 AsyncConfigurationSelector
       → 注册两个核心 Bean：
@@ -88,4 +88,4 @@
 
 ## 下一步
 
-打开 [[Spring异步]]，补充 `[[双向链接]]`：「@Async 的本质是 AOP 代理 + 线程池提交；默认线程池是新线程爆炸源，必须自定义 ThreadPoolTaskExecutor」。
+打开 Spring异步，补充 `双向链接`：「@Async 的本质是 AOP 代理 + 线程池提交；默认线程池是新线程爆炸源，必须自定义 ThreadPoolTaskExecutor」。

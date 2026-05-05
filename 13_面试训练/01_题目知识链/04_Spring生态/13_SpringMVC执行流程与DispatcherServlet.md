@@ -17,7 +17,7 @@
 
 ```
 HTTP 请求 → DispatcherServlet
-  → [[Spring MVC]]
+  → [[13_面试训练/01_题目知识链/04_Spring生态/13_SpringMVC执行流程与DispatcherServlet]]
     → 1. DispatcherServlet 初始化（initStrategies）
       → 检测并初始化 8 大组件（HandlerMapping / HandlerAdapter / ViewResolver 等）
       → 启动时完成，运行时不再重复初始化
@@ -78,4 +78,4 @@ HTTP 请求 → DispatcherServlet
 
 ## 下一步
 
-打开 [[Spring MVC]]，补充 `[[双向链接]]`：「DispatcherServlet 的本质是一个 Servlet，它把『请求分发』这个横切关注点从业务代码中剥离出来——这就是前端控制器模式」。
+打开 [[13_面试训练/01_题目知识链/04_Spring生态/13_SpringMVC执行流程与DispatcherServlet]]，补充 `双向链接`：「DispatcherServlet 的本质是一个 Servlet，它把『请求分发』这个横切关注点从业务代码中剥离出来——这就是前端控制器模式」。

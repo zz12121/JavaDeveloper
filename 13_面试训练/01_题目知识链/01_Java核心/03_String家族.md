@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[String不可变性]]` → final char[] 在 JDK 9 之后变成了什么？
-- `[[字符串常量池]]` → 字符串常量池在哪里？元空间还是堆？
-- `[[JDK版本差异]]` → JDK 9 对 String 做了什么改动？为什么？
-- `[[+号拼接]]` → `javac` 编译后到底用了 StringBuilder 还是 StringConcatFactory？
-- `[[equals和hashCode]]` → String 重写了 hashCode，算法是啥？
+- `String不可变性` → final char[] 在 JDK 9 之后变成了什么？
+- `[[01_Java核心/01_基础语法/字符串]]` → 字符串常量池在哪里？元空间还是堆？
+- `JDK版本差异` → JDK 9 对 String 做了什么改动？为什么？
+- `+号拼接` → `javac` 编译后到底用了 StringBuilder 还是 StringConcatFactory？
+- `equals和hashCode` → String 重写了 hashCode，算法是啥？
 
 ---
 
@@ -48,8 +48,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **核心区别**：
 
@@ -81,7 +79,6 @@ JDK 9 及之后：使用 StringConcatFactory.makeConcat()（InvokeDynamic）
 - 常量池从方法区移到**堆**
 - `intern()`：如果常量池没有，把堆里对象的**引用**放入常量池（而不是拷贝）
 
-</details>
 
 ---
 
@@ -90,4 +87,4 @@ JDK 9 及之后：使用 StringConcatFactory.makeConcat()（InvokeDynamic）
 1. 盲答后，对比参考要点，找到卡壳的地方
 2. 打开 `[[01_Java核心/String不可变性]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接：`[[01_Java核心/String底层结构]]` ←→ 本卡片
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

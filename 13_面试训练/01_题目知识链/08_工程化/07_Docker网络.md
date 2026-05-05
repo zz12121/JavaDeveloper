@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[Docker bridge网络]]` → docker0 网桥，容器和宿主机通信
-- `[[Docker host网络]]` → 容器直接用宿主机网络栈
-- `[[Docker overlay网络]]` → 跨主机容器通信，VXLAN 封装
-- `[[容器间通信]]` → Docker DNS，自动服务发现
-- `[[K8s网络模型]]` → Pod 网络 vs Service 网络 vs ClusterIP
+- `Docker bridge网络` → docker0 网桥，容器和宿主机通信
+- `Docker host网络` → 容器直接用宿主机网络栈
+- `Docker overlay网络` → 跨主机容器通信，VXLAN 封装
+- `容器间通信` → Docker DNS，自动服务发现
+- `[[09_工程化/04_Kubernetes/网络模型]]` → Pod 网络 vs Service 网络 vs ClusterIP
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **Docker 网络模式**：
 
@@ -100,13 +98,12 @@ docker run --network host nginx
 # 如果跑多个容器 → 端口冲突，无法启动第二个
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_工程化/Docker网络]]` 主题文档
+2. 打开 `[[13_面试训练/01_题目知识链/08_工程化/07_Docker网络]]` 主题文档
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

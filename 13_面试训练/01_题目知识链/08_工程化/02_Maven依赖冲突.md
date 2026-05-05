@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[Maven依赖传递]]` → `compile`/`provided`/`runtime` scope 对传递性的影响
-- `[[Maven依赖仲裁]]` → 最近原则 / 显式声明优先
-- `[[Maven依赖排除]]` → `<exclusions>` 标签的用法
-- `[[Maven依赖管理]]` → `<dependencyManagement>` 统一版本
-- `[[Maven enforcer插件]]` → 强制检查依赖冲突的工具
+- `Maven依赖传递` → `compile`/`provided`/`runtime` scope 对传递性的影响
+- `Maven依赖仲裁` → 最近原则 / 显式声明优先
+- `Maven依赖排除` → `<exclusions>` 标签的用法
+- `Maven依赖管理` → `<dependencyManagement>` 统一版本
+- `Maven enforcer插件` → 强制检查依赖冲突的工具
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **依赖传递（Dependency Transitivity）**：
 
@@ -110,13 +108,12 @@ Maven 会选：D(v1.5)（距离A更近）
 - `shade`：把依赖的类重打包（重写 package）进 JAR，能解决类冲突
 - `assembly`：只打包，不重写，最简单的打包方式
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_工程化/Maven依赖冲突]]` 主题文档，把没懂的地方填进去
+2. 打开 `[[13_面试训练/01_题目知识链/08_工程化/02_Maven依赖冲突]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

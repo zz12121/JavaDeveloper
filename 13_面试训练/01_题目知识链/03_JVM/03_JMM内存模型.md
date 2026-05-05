@@ -17,14 +17,14 @@
 
 ```
 JMM 内存模型
-  → [[内存模型]]
+  → [[02_并发编程/02_JMM内存模型/JMM内存模型]]
     → 为什么需要 JMM
       → CPU 多核缓存架构：每个核有自己的 L1/L2 缓存，共享主内存
       → 线程 A 在核 1 改了变量，线程 B 在核 2 可能还是旧值（缓存未刷新）
       → JMM 规定了「什么情况下可以看到其他线程的修改」
     → 三大特性
       → 可见性：线程 A 改了 x，其他线程能立即看到
-        → [[volatile关键字]] → 强制刷缓存
+        → [[02_并发编程/02_JMM内存模型/volatile]] → 强制刷缓存
       → 原子性：操作要么全成功要么全失败（不被其他线程打断）
         → synchronized / CAS
       → 有序性：代码顺序按程序员意图执行
@@ -33,7 +33,7 @@ JMM 内存模型
       → 程序顺序规则：同一线程内，前面的操作 happens-before 后面的
       → volatile 规则：volatile 写 happens-before 后续的 volatile 读
       → 传递性：A happens-before B，B happens-before C → A happens-before C
-        → [[volatile关键字]] → H-B 规则之一
+        → [[02_并发编程/02_JMM内存模型/volatile]] → H-B 规则之一
 ```
 
 ---
@@ -63,4 +63,4 @@ JMM 内存模型
 
 ## 下一步
 
-打开 [[内存模型]]，对比 [[volatile关键字]]，补充链接：「volatile 之所以能保证可见性，是因为它触发了 JMM 的「volatile 规则」——写 happens-before 读，这个保证是靠内存屏障强制刷新 CPU 缓存实现的」。
+打开 [[02_并发编程/02_JMM内存模型/JMM内存模型]]，对比 [[02_并发编程/02_JMM内存模型/volatile]]，补充链接：「volatile 之所以能保证可见性，是因为它触发了 JMM 的「volatile 规则」——写 happens-before 读，这个保证是靠内存屏障强制刷新 CPU 缓存实现的」。

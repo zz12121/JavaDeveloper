@@ -17,7 +17,7 @@
 
 ```
 AQS 抽象队列同步器
-  → [[AQS抽象队列同步器]]
+  → [[02_并发编程/04_AQS/AQS]]
     → 核心组成
       → state（volatile int）：同步状态，由子类决定语义
         → ReentrantLock：state = 重入次数
@@ -28,11 +28,11 @@ AQS 抽象队列同步器
         → 入队：tail 添加新节点，prev 指向前驱
         → 自旋等待：前驱节点释放锁时，当前节点被唤醒
     → 模板方法模式
-      → [[ReentrantLock与显式锁]]：lock() → tryAcquire() → AQS 实现
+      → ReentrantLock与显式锁：lock() → tryAcquire() → AQS 实现
         → 公平锁：检查队列是否有前驱节点
         → 非公平锁：直接 CAS 抢锁，抢不到再入队
-      → [[CountDownLatch]]：await() → tryAcquireShared()
-      → [[Semaphore]]：acquire() → tryAcquireShared()
+      → [[13_面试训练/01_题目知识链/02_并发编程/13_AQS三剑客]]：await() → tryAcquireShared()
+      → [[13_面试训练/01_题目知识链/02_并发编程/13_AQS三剑客]]：acquire() → tryAcquireShared()
 ```
 
 ---
@@ -71,4 +71,4 @@ acquireQueued() → 自旋检查前驱是否是 head
 
 ## 下一步
 
-打开 [[AQS抽象队列同步器]] 文档，对比 [[ReentrantLock与显式锁]]，补充链接：「ReentrantLock 是 AQS 最典型的实现，非公平锁直接 CAS 抢锁，公平锁多一个 hasQueuedPredecessors() 检查」。
+打开 [[02_并发编程/04_AQS/AQS]] 文档，对比 ReentrantLock与显式锁，补充链接：「ReentrantLock 是 AQS 最典型的实现，非公平锁直接 CAS 抢锁，公平锁多一个 hasQueuedPredecessors() 检查」。

@@ -17,7 +17,7 @@
 
 ```
 Kafka 架构与存储
-  → [[Kafka架构与存储]]
+  → [[13_面试训练/01_题目知识链/06_中间件/06_Kafka架构与存储]]
     → 核心概念
       → Topic：消息的逻辑分类
       → Partition：Topic 的物理分区，每个 Partition 是一个有序不可变的消息序列
@@ -28,7 +28,7 @@ Kafka 架构与存储
       → 零拷贝（Zero Copy）：sendfile() 系统调用，数据从磁盘到网卡跳过用户态
       → 批量发送：多个消息打包一次网络往返
       → 压缩：批量压缩（gzip / snappy / lz4）
-      → [[顺序读写]] vs 随机读写：顺序 IO 速度接近内存
+      → 顺序读写 vs 随机读写：顺序 IO 速度接近内存
     → 存储结构
       → 每个 Partition → 多个 Segment（.log 文件 + .index 索引 + .timeindex 时间索引）
       → Segment 满了 → 创建新 Segment
@@ -60,4 +60,4 @@ Kafka 架构与存储
 
 ## 下一步
 
-打开 [[Kafka架构与存储]]，对比 [[MQ核心概念]]，补充链接：「Kafka 的 Partition 是并行消费的基础——Partition 数量决定了最大并发消费数」。
+打开 [[13_面试训练/01_题目知识链/06_中间件/06_Kafka架构与存储]]，对比 [[09_工程化/04_Kubernetes/核心概念]]，补充链接：「Kafka 的 Partition 是并行消费的基础——Partition 数量决定了最大并发消费数」。

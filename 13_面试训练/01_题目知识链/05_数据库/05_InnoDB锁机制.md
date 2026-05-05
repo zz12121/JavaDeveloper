@@ -17,7 +17,7 @@
 
 ```
 InnoDB 锁机制
-  → [[InnoDB锁机制]]
+  → [[06_数据库/03_事务与锁/InnoDB锁机制]]
     → 按粒度分
       → 表锁：锁整张表（MyISAM 只支持表锁）
       → 行锁：锁索引记录（InnoDB 支持，MyISAM 不支持）
@@ -69,4 +69,4 @@ SELECT * FROM orders WHERE amount > 100 FOR UPDATE;
 
 ## 下一步
 
-打开 [[InnoDB锁机制]]，对比 [[死锁与活锁]]，补充链接：「InnoDB 的 Next-Key Lock 是 RR 级别下防止幻读的关键——它锁住记录和间隙，让其他事务无法插入新记录」。
+打开 [[06_数据库/03_事务与锁/InnoDB锁机制]]，对比 [[02_并发编程/11_死锁与活锁/死锁与活锁]]，补充链接：「InnoDB 的 Next-Key Lock 是 RR 级别下防止幻读的关键——它锁住记录和间隙，让其他事务无法插入新记录」。

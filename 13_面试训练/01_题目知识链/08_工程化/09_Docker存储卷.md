@@ -24,10 +24,10 @@
 
 这道题应该让你联想到：
 
-- `[[Docker存储驱动]]` → AUFS / OverlayFS / DeviceMapper（容器层）
-- `[[Docker volume]]` → Docker 管理的持久化卷
-- `[[Docker bind mount]]` → 挂载宿主机目录
-- `[[Docker tmpfs]]` → 内存文件系统，适合存敏感数据
+- `Docker存储驱动` → AUFS / OverlayFS / DeviceMapper（容器层）
+- `Docker volume` → Docker 管理的持久化卷
+- `Docker bind mount` → 挂载宿主机目录
+- `Docker tmpfs` → 内存文件系统，适合存敏感数据
 - `[[K8s PV/PVC]]` → K8s 里 volume 和 Docker volume 的关系
 
 ---
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **三种 Docker 存储方式**：
 
@@ -112,13 +110,12 @@ volumes:
   mysql-data:
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_工程化/Docker存储卷]]` 主题文档
+2. 打开 `[[13_面试训练/01_题目知识链/08_工程化/09_Docker存储卷]]` 主题文档
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

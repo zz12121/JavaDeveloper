@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[Maven生命周期]]` → clean / default / site 三套独立生命周期
-- `[[Maven插件]]` → lifecycle 和 plugin goal 的绑定关系
-- `[[Maven多模块]]` → 多模块项目中，install 和 deploy 的顺序
-- `[[Maven测试跳过]]` → `mvn package -DskipTests` vs `mvn package -Dmaven.test.skip=true`
-- `[[Maven私有仓库]]` → deploy 到 Nexus / Artifactory
+- `[[13_面试训练/01_题目知识链/08_工程化/06_Maven生命周期]]` → clean / default / site 三套独立生命周期
+- `Maven插件` → lifecycle 和 plugin goal 的绑定关系
+- `Maven多模块` → 多模块项目中，install 和 deploy 的顺序
+- `[[04_Spring生态/02_SpringBoot/测试]]` → `mvn package -DskipTests` vs `mvn package -Dmaven.test.skip=true`
+- `Maven私有仓库` → deploy 到 Nexus / Artifactory
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **Maven 三套生命周期**：
 
@@ -83,13 +81,12 @@ install  → 推到本地仓库（~/.m2/repository），仅本机可用
 deploy   → 推到远程仓库（公司 Nexus / 阿里云 Maven 私服 / Maven Central）
 ```
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_工程化/Maven生命周期]]` 主题文档
+2. 打开 `[[13_面试训练/01_题目知识链/08_工程化/06_Maven生命周期]]` 主题文档
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

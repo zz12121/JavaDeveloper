@@ -17,14 +17,14 @@
 
 ```
 CompletableFuture 异步编排
-  → [[CompletableFuture异步编排]]
+  → [[02_并发编程/09_CompletableFuture/CompletableFuture异步编排]]
     → Future 的局限
       → get() 阻塞 → 轮询浪费 CPU
       → 不能组合多个 Future → then chaining 做不到
       → 不能手动完成 → 回调注册做不到
     → CompletableFuture 的增强
       → supplyAsync / runAsync：异步执行
-        → [[线程池]] → 默认 ForkJoinPool.commonPool()
+        → [[02_并发编程/08_线程池/线程池]] → 默认 ForkJoinPool.commonPool()
       → thenApply：串行转换（A → B）
       → thenCompose：扁平化串联（返回 Future 的链式调用）
       → thenCombine：并行合并（等两个都完成再合并）
@@ -32,7 +32,7 @@ CompletableFuture 异步编排
     → 应用场景
       → 多个无依赖的接口并行调用 → thenCombine 合并结果
       → 链式调用 → thenCompose
-      → [[Virtual线程]] → CompletableFuture + 虚拟线程 = 高并发 IO
+      → Virtual线程 → CompletableFuture + 虚拟线程 = 高并发 IO
 ```
 
 ---
@@ -64,4 +64,4 @@ CompletableFuture 异步编排
 
 ## 下一步
 
-打开 [[CompletableFuture异步编排]]，对比 [[Virtual线程]]，补充链接：「CompletableFuture 适合 IO 密集型并行，而 JDK 21 的虚拟线程让每个任务不再消耗 OS 线程，两者结合是现代高并发的主流写法」。
+打开 [[02_并发编程/09_CompletableFuture/CompletableFuture异步编排]]，对比 Virtual线程，补充链接：「CompletableFuture 适合 IO 密集型并行，而 JDK 21 的虚拟线程让每个任务不再消耗 OS 线程，两者结合是现代高并发的主流写法」。

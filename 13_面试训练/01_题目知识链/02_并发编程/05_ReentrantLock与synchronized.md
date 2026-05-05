@@ -17,15 +17,15 @@
 
 ```
 ReentrantLock vs synchronized
-  → [[ReentrantLock与显式锁]]
+  → ReentrantLock与显式锁
     → 功能差异
       → ReentrantLock：可中断、可超时、公平锁
       → synchronized：不可中断、不可超时、非公平（JVM 控制）
     → 底层实现
       → synchronized：JVM 内置，编译后是 monitorenter/monitorexit
-        → [[synchronized关键字]] → JDK 6 优化：偏向锁/轻量级锁/重量级锁
+        → synchronized关键字 → JDK 6 优化：偏向锁/轻量级锁/重量级锁
       → ReentrantLock：基于 AQS，JDK 实现
-        → [[AQS抽象队列同步器]] → tryAcquire() CAS + CLH 队列
+        → [[02_并发编程/04_AQS/AQS]] → tryAcquire() CAS + CLH 队列
     → 性能对比
       → JDK 6 前：synchronized 性能差
       → JDK 6 后：锁升级机制让 synchronized 接近 ReentrantLock
@@ -68,4 +68,4 @@ ReentrantLock vs synchronized
 
 ## 下一步
 
-打开 [[ReentrantLock与显式锁]]，对比 [[synchronized关键字]]，补充 `[[双向链接]]`：「synchronized 是 JVM 内置锁，ReentrantLock 是 JDK 层面的实现，功能更丰富但代码更繁琐」。
+打开 ReentrantLock与显式锁，对比 synchronized关键字，补充 `双向链接`：「synchronized 是 JVM 内置锁，ReentrantLock 是 JDK 层面的实现，功能更丰富但代码更繁琐」。

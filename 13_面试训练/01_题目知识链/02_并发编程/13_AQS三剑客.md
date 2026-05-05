@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[AQS共享模式]]` → 三者底层都是 `tryAcquireShared`
-- `[[栅栏 vs 闭锁]]` → CyclicBarrier 是栅栏，CountDownLatch 是闭锁
-- `[[限流]]` → Semaphore 是最简单的限流工具
-- `[[线程协作]]` → await/signal vs CountDownLatch 的对比
-- `[[CompletableFuture]]` → 并发任务的另一种协作方式
+- `[[02_并发编程/04_AQS/AQS]]` → 三者底层都是 `tryAcquireShared`
+- `栅栏 vs 闭锁` → CyclicBarrier 是栅栏，CountDownLatch 是闭锁
+- `[[08_分布式与架构/05_高可用设计/限流算法]]` → Semaphore 是最简单的限流工具
+- `线程协作` → await/signal vs CountDownLatch 的对比
+- `[[02_并发编程/09_CompletableFuture/CompletableFuture异步编排]]` → 并发任务的另一种协作方式
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **三大工具对比**：
 
@@ -93,13 +91,12 @@ try {
 - CyclicBarrier：用 ReentrantLock + Condition 实现（不是纯 AQS！）
 - Semaphore：state = 许可证数量，`acquire()` → state-1，`release()` → state+1
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[AQS]]` 主题文档，把三个工具对应到共享模式
-3. 在 Obsidian 里建双向链接：`[[08_分布式与架构/限流算法]]` 对比学习（Semaphore 是信号量限流）
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[02_并发编程/04_AQS/AQS]]` 主题文档，把三个工具对应到共享模式
+3. 在 Obsidian 里建双向链接：`[[08_分布式与架构/05_高可用设计/限流算法]]` 对比学习（Semaphore 是信号量限流）
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

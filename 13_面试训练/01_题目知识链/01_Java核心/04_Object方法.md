@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[equals与hashCode契约]]` → HashMap 为什么依赖这个契约？
-- `[[浅拷贝vs深拷贝]]` → clone() 的默认行为 + 序列化实现深拷贝
-- `[[finalize废弃]]` → `Cleaner` / `PhantomReference` 替代方案
+- `equals与hashCode契约` → HashMap 为什么依赖这个契约？
+- `浅拷贝vs深拷贝` → clone() 的默认行为 + 序列化实现深拷贝
+- `finalize废弃` → `Cleaner` / `PhantomReference` 替代方案
 - `[[wait/notify机制]]` → 为什么必须在 synchronized 里（竞态条件）
-- `[[native方法]]` → Object 里哪些方法是 native 的？
+- `native方法` → Object 里哪些方法是 native 的？
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **Object 核心方法**：
 
@@ -89,7 +87,6 @@ synchronized(lock) {
 - 可能对象「复活」，破坏 GC 算法假设
 - **替代方案**：`Cleaner`（JDK 9+）或 `PhantomReference`
 
-</details>
 
 ---
 
@@ -98,4 +95,4 @@ synchronized(lock) {
 1. 盲答后，对比参考要点，找到卡壳的地方
 2. 打开 `[[01_Java核心/Object核心方法]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

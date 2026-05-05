@@ -18,7 +18,7 @@
 
 ```
 Spring 配置体系
-  → [[SpringBoot自动配置]]
+  → [[13_面试训练/01_题目知识链/04_Spring生态/04_SpringBoot自动配置]]
     → 1. 配置源类型
       → 配置文件：application.properties / application.yml / application.yaml
       → 配置profile：application-{profile}.yml
@@ -97,4 +97,4 @@ Spring 配置体系
 
 ## 下一步
 
-打开 [[SpringBoot自动配置]]，补充 `[[双向链接]]`：「配置优先级是面试高频坑点——记住：命令行参数最优先，后加载的覆盖先加载的（就近原则）」。
+打开 [[13_面试训练/01_题目知识链/04_Spring生态/04_SpringBoot自动配置]]，补充 `双向链接`：「配置优先级是面试高频坑点——记住：命令行参数最优先，后加载的覆盖先加载的（就近原则）」。

@@ -24,11 +24,11 @@
 
 这道题应该让你联想到：
 
-- `[[GitFlow流程]]` → 各分支的生命周期管理
-- `[[Git rebase]]` → 为什么 feature 分支合并前通常要 rebase？
-- `[[Git merge vs squash]]` → feature 合并到 develop 用哪种？为什么？
-- `[[Git tag]]` → release 分支和 tag 的关系
-- `[[主干开发]]` → Trunk-Based Development vs GitFlow，哪个更适合微服务？
+- `GitFlow流程` → 各分支的生命周期管理
+- `Git rebase` → 为什么 feature 分支合并前通常要 rebase？
+- `Git merge vs squash` → feature 合并到 develop 用哪种？为什么？
+- `Git tag` → release 分支和 tag 的关系
+- `主干开发` → Trunk-Based Development vs GitFlow，哪个更适合微服务？
 
 ---
 
@@ -44,8 +44,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **GitFlow 全貌**：
 
@@ -96,13 +94,12 @@ hotfix 打在 master 上 → 必须同时合并回 develop
 - 微服务架构，每个服务独立部署
 - 大公司里通常选 GitFlow + PR 流程
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[09_工程化/Git分支策略]]` 主题文档，把没懂的地方填进去
+2. 打开 `[[09_工程化/01_Git与团队协作/分支策略]]` 主题文档，把没懂的地方填进去
 3. 在 Obsidian 里建双向链接
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分

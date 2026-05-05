@@ -22,11 +22,11 @@
 
 这道题应该让你联想到：
 
-- `[[双向链表]]` → LinkedList 节点的 prev/next 指针
-- `[[数组实现环形缓冲区]]` → ArrayDeque 的底层，比 LinkedList 更高效
-- `[[栈与队列抽象]]` → Deque 接口统一了栈和队列
-- `[[堆结构]]` → PriorityQueue 的二叉堆实现
-- `[[Vector弃用原因]]` → Stack 继承 Vector 是设计失误
+- `双向链表` → LinkedList 节点的 prev/next 指针
+- `数组实现环形缓冲区` → ArrayDeque 的底层，比 LinkedList 更高效
+- `栈与队列抽象` → Deque 接口统一了栈和队列
+- `堆结构` → PriorityQueue 的二叉堆实现
+- `Vector弃用原因` → Stack 继承 Vector 是设计失误
 
 ---
 
@@ -42,8 +42,6 @@
 
 ## 参考要点（盲答后再看）
 
-<details>
-<summary>点击展开</summary>
 
 **LinkedList 底层**：双向链表，每个节点有 prev/next 指针。
 - 优点：插入删除 O(1)（已知节点位置）
@@ -70,13 +68,12 @@ public class Stack<E> extends Vector<E>  // 设计失误
 - ArrayDeque：数组实现，缓存友好，无指针开销，默认容量16且必须2的幂
 - LinkedList：每个元素都有节点对象开销，缓存不友好，但不需要扩容时复制
 
-</details>
 
 ---
 
 ## 下一步
 
 1. 盲答后，对比参考要点，找到卡壳的地方
-2. 打开 `[[LinkedList]]` 和 `[[ArrayDeque]]` 主题文档，补充底层结构
-3. 在 Obsidian 里建双向链接：`[[02_并发编程/阻塞队列]]` 关联学习
-4. 在 `[[12_面试训练/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
+2. 打开 `[[13_面试训练/01_题目知识链/01_Java核心/13_LinkedList与队列栈实现]]` 和 `ArrayDeque` 主题文档，补充底层结构
+3. 在 Obsidian 里建双向链接：`[[02_并发编程/07_阻塞队列/阻塞队列]]` 关联学习
+4. 在 `[[13_面试训练/03_每日一题/每日一题跟踪表]]` 里勾选「今日完成」，打 1~5 分
