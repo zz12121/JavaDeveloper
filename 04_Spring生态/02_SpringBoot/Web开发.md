@@ -384,22 +384,3 @@ classpath:/META-INF/resources/
 
 ---
 
-## 我的理解
-
-**Spring Boot Web 开发的本质**：
-
-1. `WebMvcAutoConfiguration` 自动配置了 Spring MVC 的所有组件
-2. `DispatcherServlet` 是前端控制器，统一入口
-3. `HandlerMethodArgumentResolver` 负责参数绑定
-4. `HttpMessageConverter` 负责 HTTP 消息转换（JSON）
-5. 全局异常处理用 `@ControllerAdvice`，拦截器用 `HandlerInterceptor`
-
-**面试高频追问**：
-
-1. Spring MVC 的请求处理流程（DispatcherServlet → HandlerMapping → HandlerAdapter → Controller）
-2. 参数绑定的原理（HandlerMethodArgumentResolver）
-3. 拦截器的执行顺序（preHandle 正序，postHandle/afterCompletion 逆序）
-4. `@ResponseBody` 的原理（HttpMessageConverter）
-5. 全局异常处理的实现方式（`@ControllerAdvice` + `@ExceptionHandler`）
-
----

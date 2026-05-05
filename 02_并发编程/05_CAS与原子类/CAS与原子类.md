@@ -452,23 +452,3 @@ static final class Cell {
 
 ---
 
-## 我的理解
-
-CAS 是 Java 并发包的 DNA。理解 CAS，就理解了为什么 Atomic 类是线程安全的、为什么 ReentrantLock 比 synchronized 更灵活、为什么 ConcurrentHashMap 读操作不需要加锁。
-
-**CAS 的核心认知**：
-
-1. **CAS 是乐观锁**——假设没有冲突，失败再重试。适合冲突少的场景
-2. **CAS 本身只保证单个变量的原子操作**——复合操作需要 CAS + 循环（如 incrementAndGet），但多个变量的协调仍然需要锁
-3. **CAS 的性能优势来自无阻塞**——没有 OS 上下文切换，但高并发下的自旋 CPU 开销不能忽视
-4. **LongAdder 是 CAS 的工程优化**——通过空间换时间（Cell 数组），将竞争分散到多个槽位
-
-**面试中 CAS 的高频考点**：
-
-1. **CAS 原理**（比较并交换、CPU cmpxchg 指令）
-2. **CAS 的三个问题**（ABA / 自旋开销 / 只能保证单个变量原子性）
-3. **AtomicInteger 底层实现**（Unsafe + volatile + CAS 循环）
-4. **AtomicLong vs LongAdder**（强一致 vs 最终一致、性能差异、伪共享）
-5. **ABA 问题的解决方案**（AtomicStampedReference / 版本号）
-6. **CAS vs synchronized**（乐观 vs 悲观、适用场景）
-7. **AtomicFieldUpdater 的使用场景和限制**

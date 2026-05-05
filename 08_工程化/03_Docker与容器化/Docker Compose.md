@@ -347,22 +347,3 @@ services:
 
 ---
 
-## 我的理解
-
-Docker Compose 的本质是**「本地 Kubernetes」**——用它把多容器应用定义成一个单元，一键启停。
-
-**最佳实践总结**：
-
-1. **开发环境必备**：用 Compose 启动所有依赖（MySQL、Redis、ES、Kafka…），新同事入职只需要 `docker compose up -d`
-2. **生产不用 Compose**：生产用 Kubernetes 或云服务商的管理平台
-3. **`.env` 管理敏感信息**：不要把密码写死在 YAML 里
-4. **`healthcheck` 很重要**：避免「容器启动了但服务还没就绪」的问题
-
-**面试高频考点**：
-
-1. Docker Compose 是做什么的？—— 单机多容器编排
-2. `depends_on` 的局限性？—— 只控制启动顺序，不保证服务就绪
-3. 怎么解决「服务就绪」问题？—— `healthcheck` + `condition: service_healthy`
-4. Docker Compose 和 Kubernetes 的区别？—— 单机 vs 集群，开发 vs 生产
-
-*本地开发不用 Docker Compose，就像写代码不用 IDE——能做，但效率低 10 倍。*

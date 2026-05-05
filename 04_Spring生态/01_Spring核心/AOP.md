@@ -246,9 +246,3 @@ proxy.getClass()   // class com.example.UserService$$EnhancerByCGLIB$$xxx
 proxy instanceof UserService  // Spring CGLIB 返回 true（JDK 代理返回 false）
 ```
 
-## 我的理解
-
-AOP 的核心就是**代理 + 切入点匹配**。Spring 在运行期通过 ProxyFactory 创建代理对象（JDK 或 CGLIB），把切面逻辑织入到匹配切入点的方法前后。面试中最重要的两个点：
-
-1. **Spring Boot 默认 CGLIB**，不是因为 CGLIB 更快，而是因为生成的代理是目标类的子类，类型检查更兼容
-2. **同类内部调用不走代理**，这是 Spring AOP 最大的坑，明白原理后就不容易踩了

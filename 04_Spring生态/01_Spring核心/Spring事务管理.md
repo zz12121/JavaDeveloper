@@ -345,19 +345,3 @@ catch (Exception e) {
 
 ---
 
-## 我的理解
-
-**Spring 事务管理的本质**：通过 AOP 拦截 `@Transactional` 方法，在方法执行前开启事务（获取连接 + 关闭 autoCommit），执行后根据是否抛异常决定 commit/rollback。
-
-**核心机制**：
-1. `TransactionManager` 抽象层 → 适配各种持久层
-2. `ThreadLocal` 绑定连接 → 保证同一个线程的多个 DAO 用同一个连接
-3. AOP 代理 → 声明式事务非侵入
-
-**面试高频追问**：
-1. @Transactional 的实现原理（AOP + TransactionInterceptor）
-2. 事务失效的场景（自调用、非 public、异常被 catch、引擎不支持）
-3. 传播行为的区别（REQUIRED vs REQUIRES_NEW vs NESTED）
-4. 为什么默认只回滚 RuntimeException（规范设计，受检异常应该强制处理）
-
----

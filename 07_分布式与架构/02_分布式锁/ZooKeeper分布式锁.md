@@ -193,29 +193,3 @@ InterProcessSemaphoreV2 unfairLock = new InterProcessSemaphoreV2(client, "/locks
 
 ---
 
-## 我的理解
-
-ZooKeeper分布式锁的核心是**临时顺序节点 + Watch机制**，保证了强一致性（CP系统），但性能比Redis差。
-
-**什么时候用ZooKeeper锁**：
-1. **分布式选主**：必须保证强一致，不能出现两个主节点
-2. **元数据修改**：修改配置、路由表等，必须保证一致性
-3. **对一致性要求极高**的场景
-
-**什么时候不用ZooKeeper锁**：
-1. **高并发扣库存**：性能不够，用Redis锁
-2. **偶尔重复可接受**：用Redis锁，简单高效
-
-实际生产中：
-- **秒杀、库存扣减** → Redis锁（性能优先）
-- **分布式选主、配置修改** → ZooKeeper锁（一致性优先）
-
-**面试最高频追问**：
-1. "ZooKeeper锁怎么实现？" → 临时顺序节点 + Watch前一个节点
-2. "ZooKeeper锁为什么可靠？" → ZAB协议保证强一致，临时节点会话机制
-3. "羊群效应是什么？怎么解决？" → 所有客户端同时被唤醒抢锁；只Watch前一个节点
-4. "ZooKeeper锁和Redis锁的区别？" → 一致性 vs 性能，CP vs AP
-
----
-
-*ZooKeeper锁是强一致的王者，但性能是硬伤。理解业务需求，选对方案才是关键。*

@@ -247,22 +247,3 @@ public class RedisDistributedLock {
 
 ---
 
-## 我的理解
-
-Redis分布式锁的核心是一句话：**用SET NX EX实现互斥，用Lua脚本保证释放的原子性，用watchdog解决超时问题**。
-
-但实际生产中，**直接用Redisson客户端**，不要自己实现。Redisson封装了：
-- 加锁（SET NX EX）
-- watchdog自动续期
-- 释放锁（Lua脚本）
-- 可重入锁（记录持有次数）
-
-面试最高频追问：
-1. "Redis分布式锁怎么实现？" → SET NX EX + Lua脚本释放
-2. "锁超时了但业务没执行完怎么办？" → watchdog自动续期
-3. "Redis主从切换会导致锁丢失吗？" → 会，ZooKeeper不会
-4. "为什么释放锁要用Lua脚本？" → GET + DEL不是原子操作，可能删除别人的锁
-
----
-
-*Redis分布式锁是性能最高的方案，但极端场景下可能丢锁。关键是衡量业务能否接受"偶尔重复执行"。*

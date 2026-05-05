@@ -437,22 +437,3 @@ class Demo {
 
 ---
 
-## 我的理解
-
-**IoC 容器的本质**：一个「对象工厂」，负责创建 Bean、管理 Bean 的生命周期、自动处理依赖关系。
-
-**Bean 创建的 5 步**：
-1. `createBeanInstance()` — 创建实例（构造器）
-2. `populateBean()` — 属性填充（依赖注入）
-3. `initializeBean()` — 初始化（@PostConstruct/init-method）
-4. `BeanPostProcessor` — 后置处理（@Async 异步代理、AOP 代理）
-5. `registerDisposableBean()` — 注册销毁逻辑
-
-**面试追问高发区**：
-1. Spring 容器的启动流程（refresh() 的 11 个步骤）
-2. Bean 的生命周期（创建 → 初始化 → 销毁）
-3. 循环依赖的解决（三级缓存原理）
-4. @Autowired 的处理时机（populateBean 阶段）
-5. @Configuration 为什么用 CGLIB 代理
-
----

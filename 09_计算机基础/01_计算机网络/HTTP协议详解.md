@@ -189,10 +189,3 @@ HTTP/3（QUIC）在 UDP 上实现，彻底解决队头阻塞。
 certbot renew --dry-run  # 测试自动更新
 ```
 
-## 我的理解
-
-HTTPS 的核心价值是**加密 + 认证 + 完整性**。面试最常被追问的是：
-
-1. **TLS 握手流程**（1.2 是 2-RTT，1.3 是 1-RTT）
-2. **前向安全性（PFS）**：ECDHE 密钥交换，临时密钥对，私钥泄露也不影响历史会话
-3. **HTTP/2 vs HTTP/3**：HTTP/2 仍有 TCP 队头阻塞，HTTP/3 用 QUIC（UDP）彻底解决

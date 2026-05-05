@@ -8,7 +8,7 @@
 
 CPU 多级缓存导致同一变量在不同核心上可能有不同副本。一个线程写入新值后，其他线程可能永远读到旧值。
 
-没有 volatile 之前，保证可见性只能用 [[02_并发编程/03_锁机制|synchronized]]（重量级）或 Lock。volatile 提供了一种更轻量的方式——不需要加锁，就能让写入对其他线程立即可见，同时禁止特定的指令重排。
+没有 volatile 之前，保证可见性只能用 [[02_并发编程/03_锁机制/锁机制|synchronized]]（重量级）或 Lock。volatile 提供了一种更轻量的方式——不需要加锁，就能让写入对其他线程立即可见，同时禁止特定的指令重排。
 
 ---
 
@@ -87,7 +87,7 @@ unsafe.putObjectVolatile(obj, offset, value);   // volatile 写
 Object val = unsafe.getObjectVolatile(obj, offset);  // volatile 读
 ```
 
-[[02_并发编程/05_并发容器|ConcurrentHashMap]] 的 `table` 引用就是 volatile 的，保证扩容时新数组对所有线程可见。
+[[02_并发编程/06_并发容器/并发容器|ConcurrentHashMap]] 的 `table` 引用就是 volatile 的，保证扩容时新数组对所有线程可见。
 
 ### volatile 的内存语义（JMM 层面）
 
@@ -113,7 +113,7 @@ if (flag) {          // ③ volatile 读
 
 ## 深入原理
 
-synchronized 的详细说明见 [[02_并发编程/03_锁机制|锁机制]]。
+synchronized 的详细说明见 [[02_并发编程/03_锁机制/锁机制|锁机制]]。
 
 | 维度 | volatile | synchronized |
 |------|----------|----------|
@@ -137,7 +137,7 @@ volatile int i = 0;
 // 3. 写回 i → 两个线程都写 1，丢失了一次递增
 ```
 
-需要原子性就用 [[02_并发编程/04_CAS与原子类|AtomicInteger]] 或 synchronized。
+需要原子性就用 [[02_并发编程/05_CAS与原子类/CAS与原子类|AtomicInteger]] 或 [[02_并发编程/03_锁机制/锁机制|synchronized]]。
 
 ---
 

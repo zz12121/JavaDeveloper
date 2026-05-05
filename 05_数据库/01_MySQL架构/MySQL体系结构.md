@@ -628,28 +628,3 @@ SET GLOBAL sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FO
 
 ---
 
-## 我的理解
-
-MySQL的架构设计精髓在于 **分层解耦**：
-
-1. **Server层负责"怎么执行"**：解析SQL、优化执行计划、协调存储引擎
-2. **存储引擎层负责"怎么存"**：InnoDB关注事务和崩溃恢复，MyISAM关注只读性能
-
-这种分层带来的好处：
-- **可插拔**：可以根据业务选择存储引擎
-- **职责清晰**：Server层优化和存储引擎优化可以独立进行
-- **易于理解**：出问题时，能快速定位是哪一层的问题
-
-**类比**：
-- Server层就像"餐厅前台"：接单、安排座位、协调后厨
-- 存储引擎就像"后厨"：中餐厅、西餐厅、日料店，各有各的做法，但都提供"做菜"服务
-
-**面试时的回答思路**：
-- 先说三层架构（Client → Server → Storage Engine）
-- 然后重点讲Server层的四个组件（Connection Pool、Parser、Optimizer、Executor）
-- 最后讲为什么存储引擎是可插拔的（Handler接口，不同场景选不同引擎）
-- 如果面试官追问，再深入讲Optimizer的成本模型，或者InnoDB vs MyISAM的区别
-
----
-
-*MySQL的架构是理解所有数据库操作的基础。不理解架构，就无法理解"为什么这条SQL慢"、"为什么加了索引没用"、"为什么事务没回滚"。*

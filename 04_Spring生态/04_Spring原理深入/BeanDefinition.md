@@ -308,28 +308,3 @@ public class MyFactoryBean implements FactoryBean<User> {
 
 ---
 
-## 我的理解
-
-**BeanDefinition 的本质**：Spring 容器的**配方表**。所有 Bean 的创建都始于 `BeanDefinition`。
-
-**核心流程**：
-
-```
-配置文件 / 注解
-    ↓
-BeanDefinitionReader（解析）
-    ↓
-BeanDefinitionRegistry（注册）
-    ↓
-BeanFactory.getBean()（创建 Bean 时读取 BeanDefinition）
-```
-
-**面试高频追问**：
-
-1. `BeanDefinition` 是什么？（Bean 的元数据模型，描述如何创建 Bean）
-2. `BeanDefinition` 有哪些实现类？（`GenericBeanDefinition`、`RootBeanDefinition`、`ScannedGenericBeanDefinition`...）
-3. `BeanDefinition` 的注册表在哪里？（`DefaultListableBeanFactory.beanDefinitionMap`）
-4. `BeanDefinition` 合并的原理（父子合并，递归，结果存 `RootBeanDefinition`）
-5. `BeanFactoryPostProcessor` 和 `BeanDefinition` 的关系（可以修改 `BeanDefinition`，是 Spring Boot 自动配置的基础）
-
----
